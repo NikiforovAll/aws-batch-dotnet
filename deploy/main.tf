@@ -106,8 +106,8 @@ module "batch" {
   }
 
   compute_environments = {
-    main_ec2_spot = {
-      name_prefix = "ec2_spot"
+    main_ec2 = {
+      name_prefix = "ec2"
 
       compute_resources = {
         type                = "EC2"
@@ -125,8 +125,8 @@ module "batch" {
         # for the lifetime of the compute environment
         tags = {
           # This will set the name on the Ec2 instances launched by this compute environment
-          Name = "${local.name}-spot"
-          Type = "Ec2Spot"
+          Name = "${local.name}-ec2"
+          Type = "Ec2"
         }
       }
     }
@@ -139,7 +139,7 @@ module "batch" {
       state    = "ENABLED"
       priority = 1
 
-      compute_environments = ["main_ec2_spot"]
+      compute_environments = ["main_ec2"]
 
       tags = {
         JobQueue = "Job queue"
