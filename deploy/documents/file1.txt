@@ -1,0 +1,7 @@
+AWS Batch is a cloud service from Amazon Web Services (AWS) that is used to handle batch computing workloads. It's designed to enable developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs on AWS.
+
+AWS Batch dynamically provisions the optimal quantity and type of compute resources (e.g., CPU or memory-optimized instances) based on the volume and specific resource requirements of the batch jobs submitted. With AWS Batch, there is no need to install or manage batch computing software, which allows you to focus on analyzing results and solving problems.
+
+AWS Batch plans, schedules, and executes your batch computing workloads across the full range of AWS compute services and features, such as Amazon EC2 and Spot Instances. It's a fully managed service that can run batch jobs at any scale.
+
+AWS Batch is integrated with AWS Identity and Access Management (IAM), AWS CloudTrail, Amazon CloudWatch, and AWS CloudFormation, providing detailed monitoring and logging, and it supports multi-node parallel jobs for more complex workloads.
