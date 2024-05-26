@@ -110,7 +110,7 @@ public class MigrateCommand(IAmazonS3 s3, IConfiguration configuration, ILogger<
             .Aggregate(
                 new StringBuilder(),
                 (sb, kvp) =>
-                    sb.Append(kvp.Key).Append(':').Append(kvp.Value).Append(Environment.NewLine)
+                    sb.Append(kvp.Key).Append(':').Append(kvp.Value).Append('\n')
             )
             .ToString();
     }

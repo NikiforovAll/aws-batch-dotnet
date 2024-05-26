@@ -42,7 +42,7 @@ public class MergeCommand(IAmazonS3 s3, ILogger<MergeCommand> logger)
                 );
 
                 var contentString = await new StreamReader(content.ResponseStream).ReadToEndAsync();
-                var lines = contentString.Split(Environment.NewLine);
+                var lines = contentString.Split('\n');
                 Parallel.ForEach(
                     lines,
                     line =>

@@ -110,9 +110,9 @@ module "batch" {
       name_prefix = "ec2"
 
       compute_resources = {
-        type                = "EC2"
+        type = "EC2"
 
-        min_vcpus      = 1
+        min_vcpus      = 0
         max_vcpus      = 8
         desired_vcpus  = 2
         instance_types = ["m4.large"]
